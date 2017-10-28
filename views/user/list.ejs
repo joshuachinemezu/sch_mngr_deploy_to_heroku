@@ -1,0 +1,64 @@
+<!--
+including header content which is common for all pages
+-->
+<%- include ../layouts/header.ejs %>
+
+<% if (messages.error) { %>
+	<p style="color:red"><%- messages.error %></p>
+<% } %>
+
+<% if (messages.success) { %>
+	<p style="color:green"><%- messages.success %></p>
+<% } %>	
+
+
+<div class="table-responsive">   
+  <table class='table'>
+
+	<thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile Number</th>
+        <th>Age</th>
+        <th colspan='2' class='pull-right'>Actions</th>
+      </tr>
+    </thead>
+	
+	<!--
+		Using FOREACH LOOP for the users array
+		
+		myArray.forEach(function(el, index) {
+			// el - current element, i - index
+		});
+	-->
+	    <tbody>
+			<% if (data) { %>
+			<% data.forEach(function(user){ %>
+				<tr>
+					<td><%= user.name %></td>
+					<td><%= user.email %></td>
+					<td><%= user.phone_num %></td>
+					<td><%= user.age %></td>
+					<td>
+						<div>
+							<a href='/users/edit/<%= user.id %>' class='btn btn-info'>Edit</a> &nbsp;
+					</td>
+					<td>							
+							    <form method="post" action="/users/delete/<%= user.id %>">
+								<input type="submit" name="delete" value='Delete' class='btn btn-danger' style='margin-left:-10px' onClick="return confirm('Are you sure you want to delete?')" />
+								<input type="hidden" name="_method" value="DELETE" />
+							</form>
+						</div>
+					</td>
+				</tr>
+			<% }) %>
+			<% } %>
+		</tbody>
+	</table>
+	</div>
+
+<!--
+including footer content which is common for all pages
+-->
+<%- include ../layouts/footer.ejs %>

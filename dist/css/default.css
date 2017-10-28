@@ -1,0 +1,38 @@
+body {
+	font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+a {
+	color: #fff;
+	padding: 10px;
+}
+a:hover {
+	color: 	#D3D3D3;
+	text-decoration: none;
+}
+.main_bg {
+	background:	#1E90FF;
+	height: 30%;
+}
+.nav_links {
+	padding-top: 10px;
+	padding-right: 15px;
+}
+.app_title {
+	background: #fff;
+	margin: -120px 80px 60px 80px;
+	height: 125px;
+	padding-top: 5px;
+}
+.table {
+	width: 90%;
+	overflow-x: hidden;
+	margin-left: 20px;
+}
+tr:nth-child(even){
+	background-color: #f2f2f2
+}
