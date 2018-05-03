@@ -10,7 +10,7 @@ Prerequisites:
 
 ## Installation
 
-1. Clone the repository: `git clone git@github.com:devjossy/School_manager-with-nodejs`
+1. Clone the repository: `git clone git@github.com:joshuachinemezu/School_manager-with-nodejs`
 2. Install the application: `npm install`
 4. Run demo_create_db.js inorder to create the needed database.
 5. Then import the students.sql into the created database('sch_mngr').
